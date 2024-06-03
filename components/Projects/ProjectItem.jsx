@@ -20,11 +20,11 @@ function Project(props) {
 				aria-label="Single Project"
 				passHref
 			>
-				<div className="rounded-xl shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-dark">
+				<div className="grid-item rounded-lg shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-dark">
 					<div>
 						<Image
-							src={props.img}
-							className="rounded-t-xl border-none"
+							src={props.image}
+							className="banner-img rounded-t-lg border-none "
 							alt="Single Project"
 							layout="responsive"
 							width={100}

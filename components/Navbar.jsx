@@ -83,7 +83,7 @@ function Navbar() {
 				<div
 					className={
 						showMenu
-							? 'block m-0 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none'
+							? 'block m-0 mt-5 sm:ml-4 sm:mt-3 md:flex px-5 py-3 sm:p-0 justify-between items-center shadow-lg sm:shadow-none md:hidden'
 							: 'hidden'
 					}
 				>
@@ -105,7 +105,7 @@ function Navbar() {
 					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-secondary-dark">
 						<button
 							onClick={showHireMeModal}
-							className="font-general-medium sm:hidden block text-left text-md bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
+							className="font-general-medium sm:hidden block text-left text-md bg-secondary-dark hover:bg-ternary-dark text-ternary-light hover:text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
 							aria-label="Hire Me Button"
 						>
 							Hire Me
@@ -141,7 +141,7 @@ function Navbar() {
 					<div className="hidden md:flex">
 						<button
 							onClick={showHireMeModal}
-							className="text-md font-general-medium bg-indigo-500 hover:bg-indigo-600 text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
+							className="text-md font-general-medium bg-secondary-dark hover:bg-ternary-dark text-ternary-light hover:text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
 							aria-label="Hire Me Button"
 						>
 							Hire Me

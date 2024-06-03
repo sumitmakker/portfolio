@@ -8,7 +8,7 @@ function ProjectsFilter({setSelectProject}) {
 	];
 	
   return (
-	<select onChange={(e) => {setSelectProject(e.target.value)}} className="px-4 sm:px-6 py-2 border border-secondary-dark rounded-lg text-sm sm:text-md dark:font-medium bg-ternary-dark text-ternary-light">
+	<select onChange={(e) => {setSelectProject(e.target.value)}} className="px-4 sm:px-6 py-2 border-secondary-dark rounded-lg text-sm sm:text-md dark:font-medium bg-secondary-dark text-ternary-light">
 		<option value={setSelectProject} className="text-sm sm:text-md">All Projects</option>
 
 		{selectOptions.map((option) => (

@@ -1,14 +1,20 @@
 import React from 'react'
 import MetaHead from '../components/Reuseable/MetaHead'
 import Banner from '../components/Home/Banner'
-import Projects from '../components/Projects/Projects'
+import ProjectsList from '../components/Projects/ProjectsList'
 
 function Home() {
   return (
 	<div className="container mx-auto">
 		<MetaHead />
 		<Banner />
-		<Projects />
+
+		<div className="text-center">
+			<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-primary-light">
+				Projects portfolio
+			</p>
+		</div>
+		<ProjectsList />
 	</div>
   )
 }

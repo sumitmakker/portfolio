@@ -5,15 +5,16 @@ import ProjectsList from '../components/Projects/ProjectsList'
 
 function Home() {
   return (
-	<div className="container mx-auto">
+	<div className="mx-auto">
 		<MetaHead />
 		<Banner />
 
-		<div className="text-center">
+		<div className="text-center mt-16 md:mt-32">
 			<p className="font-general-medium text-2xl sm:text-4xl mb-1 text-primary-light">
 				Projects portfolio
 			</p>
 		</div>
+
 		<ProjectsList />
 	</div>
   )

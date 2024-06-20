@@ -1,119 +1,61 @@
+import 'react-slideshow-image/dist/styles.css'
+import { Fancybox } from "@fancyapps/ui";
+import "@fancyapps/ui/dist/fancybox/fancybox.css";
 import React from 'react'
 import { projects } from '../../data/projects';
-import { FiClock,FiTag } from 'react-icons/fi';
+import { FiClock,FiTag,FWor } from 'react-icons/fi';
+import { TbWorld } from "react-icons/tb";
+import Tabs from '../../components/Projects/Tabs/Tabs';
 import Image from 'next/image';
 
 function ProjectDetails({project}) {
-  return (
-	<div className="container mx-auto">
-		{/* Header */}
-		<div>
-			<p className="font-general-medium text-left text-3xl sm:text-4xl font-bold text-primary-light mt-14 sm:mt-20 mb-7">
-				{project.title}
-			</p>
-			<div className="flex">
-				<div className="flex items-center mr-10">
-					<FiClock className="text-xl text-ternary-light" />
-					<span className="font-general-regular ml-2 leading-none text-primary-light">
-						{project.publishDate}
-					</span>
-				</div>
-				<div className="flex items-center">
-					<FiTag className="w-4 h-4 text-ternary-light" />
-					<span className="font-general-regular ml-2 leading-none text-primary-light">
-						{project.tags.join(', ')}
-					</span>
-				</div>
-			</div>
-		</div>
 
-		{/* Gallery */}
-		<div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
+	Fancybox.bind("[data-fancybox]", {
+		// Your custom options
+	});
 
-			<div className="mb-10 sm:mb-0" key={project.id}>
-				<Image src={project.image} className="rounded-xl cursor-pointer shadow-lg sm:shadow-none" alt={project.title} key={project.id} layout="responsive" width={100} height={90}
-				/>
-			</div>
-
-			{project.images.map((imageItem) => {
-				return (
-					<div className="mb-10 sm:mb-0" key={imageItem.id}>
-	  
-						<Image src={imageItem.img} className="rounded-xl cursor-pointer shadow-lg sm:shadow-none" alt={imageItem.title} key={imageItem.id} layout="responsive" width={100} height={90} />
+	return (
+		<div className="conatiner max-w-5xl mx-auto">
+			{/* Header */}
+			<div className='flex flex-col items-center'>
+				<p className="font-general-medium text-left text-3xl sm:text-5xl font-bold text-primary-light mt-10 md:mt-20 mb-7">
+					{project.title}
+				</p>
+				
+				<div className="grid md:grid-cols-2 gap-6">
+					<div className="flex items-center">
+						<FiClock className="text-xl text-ternary-light" />
+						<span className="font-general-regular ml-2 leading-none text-primary-light">
+							{project.publishDate}
+						</span>
 					</div>
-				);
-			})}
-		</div>
-
-		{/* Info */}
-		<div className="block sm:flex gap-0 sm:gap-10 mt-14">
-			<div className="w-full sm:w-1/3 text-left">
-				{/* Single project client details */}
-				<div className="mb-7">
-					<p className="font-general-regular text-2xl font-semibold text-secondary-light mb-2">
-						About Client
-					</p>
-					<ul className="leading-loose">
-						{project.companyInfo.map(
-							(info) => {
-								return (
-									<li
-										className="font-general-regular text-ternary-light"
-										key={info.id}
-									>
-										<span>{info.title}: </span>
-										{info.title === 'Website' ? <a
-											href={info.details}
-											target='_blank'
-											className={
-												info.title === 'Website' ||
-												info.title === 'Phone'
-													? 'hover:underline hover:text-indigo-400 cursor-pointer duration-300'
-													: ''
-											}
-											aria-label="Project Website and Phone"
-										>{info.details}</a> : <span>{info.details}</span>
-									}
-									
-									</li>
-								);
-							}
-						)}
-					</ul>
+					<div className="flex items-center">
+						<FiTag className="w-4 h-4 text-ternary-light" />
+						<span className="font-general-regular ml-2 leading-none text-primary-light">
+							{project.tags.join(', ')}
+						</span>
+					</div>
 				</div>
 
-				{/* Single project objectives */}
-				<div className="mb-7">
-					<p className="font-general-regular text-2xl font-semibold text-ternary-light mb-2">
-						Objective
-					</p>
-					<p className="font-general-regular text-ternary-light">
-						{project.objective}
-					</p>
-				</div>
-
-				{/* Single project technologies */}
-				<div className="mb-7">
-					<p className="font-general-regular text-2xl font-semibold text-ternary-light mb-2">
-						Tech Used
-					</p>
-					<p className="font-general-regular text-ternary-light">
-						{project.tech.join(
-							', '
-						)}
-					</p>
-				</div>
+				<a href={project.url} target='_blank' className="font-general-medium flex justify-center items-center w-36 sm:w-48 mt-7 mb-6 sm:mb-0 text-lg py-2.5 sm:py-3 shadow-lg rounded-lg bg-secondary-dark hover:bg-ternary-dark text-ternary-light hover:text-white duration-500" aria-label="Download Resume">
+					<TbWorld className="w-5 h-5 text-ternary-light me-3" />
+					<span className="text-sm sm:text-lg duration-100">Visit Website</span>
+				</a>
 
 			</div>
 
-			{/*  Single project right section details */}
-			<div className="w-full sm:w-2/3 text-left mt-10 sm:mt-0">
+			<a href={project.image} data-fancybox>
+				<Image className='mx-auto rounded mt-3 lg:mt-10 mb-10 md:mt-0' src={project.image} width={400} height={200} style={{maxWidth : '600px',width : '100%'}}/>
+			</a>
+
+			<div className="text-center mt-10 md:mt-14">
 				<p className="font-general-regular mb-5 text-lg text-ternary-light">{project.details}</p>
 			</div>
-		</div>
 
-	</div>
-  )
+			<Tabs project_images={project.images}/>
+
+		</div>
+	)
 }
 
 export async function getServerSideProps({ query }) {

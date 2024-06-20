@@ -4,6 +4,7 @@ export const projects = [
 	{
 		id: 'test-academy',
 		title: 'Test Academy',
+		url: 'https://www.testacademy.net',
 		category: 'Web Application',
 		image: '/images/ta/banner.png',
 		publishDate: 'December 07, 2023',
@@ -11,13 +12,35 @@ export const projects = [
 		images: [
 			{
 				id: uuidv4(),
-				title: 'Test Academy',
-				img: '/images/ta/services.png',
+				caption : 'Test Creation',
+				title : 'Efficient Test Creation',
+				sub_title : 'Discover how our guide helps teachers design tests that promote learning.',
+				img: '/images/ta/test-creation.png',
+				img_wide: '/images/ta/test-creation-wide.png',
 			},
 			{
 				id: uuidv4(),
-				title: 'Test Academy',
+				caption : 'Test Details',
+				title : 'Easy to read details',
+				sub_title : 'Discover how our guide helps teachers design tests that promote learning.',
+				img: '/images/ta/test-details.png',
+				img_wide: '/images/ta/test-details-wide.png',
+			},
+			{
+				id: uuidv4(),
+				caption : 'Test Attempt',
+				title: 'Easy Test Attempt',
+				sub_title : 'Facilitate smooth test attempts ensuring a seamless testing experience.',
+				img: '/images/ta/test-attempt.png',
+				img_wide: '/images/ta/test-attempt-wide.png',
+			},
+			{
+				id: uuidv4(),
+				caption : 'Admin Dashboard',
+				title: 'Effortless Website Administration',
+				sub_title : 'Simple website managemnet for Admin fnjhdkh hfjkh fhdf hfjdsjf fdhdjf.',
 				img: '/images/ta/dashboard.png',
+				img_wide: '/images/ta/dashboard-wide.png',
 			},
 		],
 		companyInfo: [
@@ -37,7 +60,6 @@ export const projects = [
 				details: 'https://www.testacademy.net',
 			},
 		],
-		objective : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
 		tech : [
 			'HTML',
 			'CSS',
@@ -51,7 +73,6 @@ export const projects = [
 	{
 		id: 'bubble-queen',
 		title: 'Bubble Queen',
-		url: 'phoenix-digital-agency',
 		category: 'Web Application',
 		image: '/images/bbq/banner.png',
 		publishDate: 'September 21, 2023',
@@ -59,12 +80,17 @@ export const projects = [
 		images: [
 			{
 				id: uuidv4(),
-				title: 'Bubble Queen',
-				img: '/images/bbq/services.png',
+				title: 'Schedule a Service',
+				img: '/images/bbq/schedule.png',
 			},
 			{
 				id: uuidv4(),
-				title: 'Bubble Queen',
+				title: 'Cart',
+				img: '/images/bbq/cart.png',
+			},
+			{
+				id: uuidv4(),
+				title: 'Admin Dashboard',
 				img: '/images/bbq/dashboard.png',
 			},
 		],
@@ -85,7 +111,6 @@ export const projects = [
 				details: 'https://www.bubblequeen.in',
 			},
 		],
-		objective : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
 		tech : [
 			'HTML',
 			'CSS',
@@ -97,23 +122,27 @@ export const projects = [
 		details : 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil vel illum asperiores dignissimos cumque quibusdam et fugiat voluptatem nobis suscipit explicabo, eaque consequatur nesciunt, fugit eligendi corporis laudantium adipisci soluta? Lorem ipsum, dolor sit amet consectetur adipisicing elit. Incidunt totam dolorum, ducimus obcaecati, voluptas facilis molestias nobis ut quam natus similique inventore excepturi optio ipsa deleniti fugit illo. Unde, amet! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum illo necessitatibus perspiciatis! Aperiam perferendis labore temporibus, eos culpa corporis recusandae quas, fuga voluptatibus nesciunt odit libero tenetur neque consequatur ea.',
 	},
 	{
-		id: 'bubble-queen',
-		title: 'Bubble Queen',
-		url: 'phoenix-digital-agency',
+		id: 'great-india-caravan',
+		title: 'Great India Caravan',
 		category: 'Web Application',
-		image: '/images/bbq/banner.png',
+		image: '/images/gic/banner.png',
 		publishDate: 'September 21, 2023',
 		tags: ['Frontend','Backend'],
 		images: [
 			{
 				id: uuidv4(),
-				title: 'Bubble Queen',
-				img: '/images/bbq/services.png',
+				title: 'Tour Details',
+				img: '/images/gic/tour-details.png',
 			},
 			{
 				id: uuidv4(),
-				title: 'Bubble Queen',
-				img: '/images/bbq/dashboard.png',
+				title: 'Booking',
+				img: '/images/gic/booking.png',
+			},
+			{
+				id: uuidv4(),
+				title: 'Admin Dashboard',
+				img: '/images/gic/dashboard.png',
 			},
 		],
 		companyInfo: [
@@ -133,7 +162,6 @@ export const projects = [
 				details: 'https://www.bubblequeen.in',
 			},
 		],
-		objective : 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio, natus! Quibusdam enim quod in esse, mollitia molestias incidunt quas ipsa accusamus veniam.',
 		tech : [
 			'HTML',
 			'CSS',

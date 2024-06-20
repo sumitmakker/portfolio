@@ -27,8 +27,8 @@ function Footer() {
 	];
 
 	return (
-		<div className="container mx-auto">
-			<div className="pt-20 sm:pt-30 pb-8 mt-20 border-t-2 border-secondary-dark">
+		<div className="mx-auto">
+			<div className="pt-10 md:pt-20 pb-8 mt-16 md:mt-20 border-t-2 border-secondary-dark">
 				{/* Footer social links */}
 				<div className="font-general-regular flex flex-col justify-center items-center mb-12 sm:mb-28">
 					<p className="text-2xl text-primary-light mb-5">

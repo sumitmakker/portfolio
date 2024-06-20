@@ -27,7 +27,7 @@ function Projects() {
 	});
 
 	return (
-		<section className="py-5 sm:py-10 mt-5 sm:mt-20">
+		<section className="mt-10 md:mt-20">
 
 			{/* <div className="mt-10 sm:mt-16">
 				
@@ -43,7 +43,7 @@ function Projects() {
 				</div>
 			</div> */}
 
-			<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-10">
+			<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 md:gap-8 lg:gap-14">
 				{selectProject
 					? selectProjectsByCategory.map((project, index) => {
 							return <ProjectItem key={project.id} {...project} />;

@@ -20,7 +20,7 @@ function Project(props) {
 				aria-label="Single Project"
 				passHref
 			>
-				<div className="grid-item rounded-lg shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-dark">
+				<div className="grid-item hover-scale-up rounded-lg shadow-lg hover:shadow-xl cursor-pointer mb-10 sm:mb-0 bg-secondary-dark">
 					<div>
 						<Image
 							src={props.image}

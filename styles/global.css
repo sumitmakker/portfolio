@@ -7,6 +7,7 @@ body {
 	padding: 0;
 	margin: 0;
 	font-family: 'GeneralSans-Variable';
+	background-color: #0B0C10;
 }
 
 a {
@@ -246,12 +247,20 @@ a {
 	}
 }
 
-.grid-item{
+.hover-scale-up{
 	transition: transform .4s; /* Animation */
 }
-.grid-item:hover {
+.hover-scale-up:hover{
 	transform: translate(0, -8px);
 }
+
+.hover-zoom-in{
+	transition: transform .4s; /* Animation */
+}
+.hover-zoom-in:hover{
+	transform: scale(1.02);
+}
+
 .grid-item .banner-img{
 	height: 320px !important;
 	object-fit: cover;

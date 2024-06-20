@@ -3,7 +3,7 @@ import ProjectsList from '../../components/Projects/ProjectsList'
 
 function Projects() {
   return (
-	<div className="container mx-auto">
+	<div className="mx-auto">
 		<ProjectsList />
 	</div>
   )

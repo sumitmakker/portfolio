@@ -17,7 +17,7 @@ function Footer() {
 		{
 			id: 2,
 			icon: <FiGithub />,
-			url: 'https://github.com/sumitmakkerapps',
+			url: 'https://github.com/sumitmakker',
 		},
 		{
 			id: 3,

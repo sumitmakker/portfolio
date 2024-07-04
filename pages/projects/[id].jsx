@@ -48,7 +48,13 @@ function ProjectDetails({project}) {
 				<Image className='mx-auto rounded mt-3 lg:mt-10 mb-10 md:mt-0' src={project.image} width={400} height={200} style={{maxWidth : '600px',width : '100%'}}/>
 			</a>
 
-			<div className="text-center mt-10 md:mt-14">
+			<div className="flex justify-center font-general-regular text-ternary-light">
+				<span className="ml-2">
+					Tech used &nbsp;:&nbsp; {project.tech.join(', ')}
+				</span>
+			</div>
+
+			<div className="text-center mt-10 md:mt-8">
 				<p className="font-general-regular mb-5 text-lg text-ternary-light">{project.details}</p>
 			</div>
 

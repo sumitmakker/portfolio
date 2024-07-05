@@ -27,7 +27,7 @@ function Projects() {
 	});
 
 	return (
-		<section className="mt-10 md:mt-20">
+		<div className="w-full mt-10 md:mt-20">
 
 			{/* <div className="mt-10 sm:mt-16">
 				
@@ -52,7 +52,7 @@ function Projects() {
 							<ProjectItem key={project.id} {...project} />
 					  ))}
 			</div>
-		</section>
+		</div>
 	);
 }
 

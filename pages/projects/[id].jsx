@@ -15,7 +15,7 @@ function ProjectDetails({project}) {
 	});
 
 	return (
-		<div className="conatiner max-w-5xl mx-auto">
+		<div className="max-w-7xl mx-auto px-4 md:px-2">
 			{/* Header */}
 			<div className='flex flex-col items-center'>
 				<p className="font-general-medium text-left text-3xl sm:text-5xl font-bold text-primary-light mt-10 md:mt-20 mb-7">

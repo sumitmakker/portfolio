@@ -88,17 +88,17 @@ function Navbar() {
 					}
 				>
 					<div className="block text-left text-lg text-ternary-light hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2">
-						<Link href="/projects" aria-label="Projects">
+						<Link href="/projects" aria-label="Projects" onClick={toggleMenu}>
 							Projects
 						</Link>
 					</div>
 					<div className="block text-left text-lg text-ternary-light hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-secondary-dark">
-						<Link href="/about" aria-label="About Me">
+						<Link href="/about" aria-label="About Me" onClick={toggleMenu}>
 							About Me
 						</Link>
 					</div>
 					<div className="block text-left text-lg text-ternary-light hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2 border-t-2 pt-3 sm:pt-2 sm:border-t-0 border-secondary-dark">
-						<Link href="/contact" aria-label="Contact">
+						<Link href="/contact" aria-label="Contact" onClick={toggleMenu}>
 							Contact
 						</Link>
 					</div>

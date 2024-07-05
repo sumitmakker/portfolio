@@ -12,7 +12,7 @@ function MetaHead({title,description,keywords}) {
 
 		<link rel="icon" href="/favicon.ico"/>
 
-		<title>{title}</title>
+		<title>sds {title}</title>
 
 	</Head>
   )

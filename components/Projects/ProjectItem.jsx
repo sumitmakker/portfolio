@@ -13,6 +13,7 @@ function Project(props) {
 				duration: 0.7,
 				delay: 0.15,
 			}}
+			key={'project-item-' + props.id}
 		>
 			<Link
 				href="/projects/[id]"

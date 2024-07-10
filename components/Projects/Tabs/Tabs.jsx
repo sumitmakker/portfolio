@@ -19,14 +19,14 @@ function Tabs({project_images}) {
 					<div className="lg:col-span-7" data-aos="fade-right">
 						<div className="flex flex-col justify-center h-100 md:mt-8">
 							{
-								project_images.map((image_item,index) => <TabDetailItem image_item={image_item} index={index} tab={tab} onTabItemClick={(tab_index) => setTab(tab_index)}/>)
+								project_images.map((image_item,index) => <TabDetailItem key={'tab-' + index} image_item={image_item} index={index} tab={tab} onTabItemClick={(tab_index) => setTab(tab_index)}/>)
 							}
 						</div>
 					</div>
 
 					<div className="h-full lg:col-span-5 order-first lg:order-last mb-8 md:mb-0">	
 						{
-							project_images.map((image_item,index) => tab === index && <TabImageItem image_item={image_item} tab={tab}/>)
+							project_images.map((image_item,index) => tab === index && <TabImageItem key={'tab-' + index} image_item={image_item} tab={tab}/>)
 						}
 					</div >
 

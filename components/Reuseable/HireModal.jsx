@@ -78,7 +78,7 @@ function HireModal({ onClose, onRequest }) {
 										{selectOptions.map((option) => (
 											<option
 												className="text-normal sm:text-md"
-												key={option}
+												key={'option-' + option}
 											>
 												{option}
 											</option>

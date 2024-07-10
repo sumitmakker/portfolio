@@ -27,7 +27,7 @@ function ContactDetails() {
 				</h2>
 				<ul>
 					{contacts.map((contact) => (
-						<li className="flex " key={contact.id}>
+						<li className="flex " key={'info-' + contact.id}>
 							<i className="text-2xl text-neutral-500 dark:text-neutral-400 mr-4 mt-1">
 								{contact.icon}
 							</i>

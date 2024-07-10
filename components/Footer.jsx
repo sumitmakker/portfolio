@@ -39,7 +39,7 @@ function Footer() {
 							<a
 								href={link.url}
 								target="__blank"
-								key={link.id}
+								key={'link-' + link.id}
 								className="text-gray-400 hover:text-indigo-400 cursor-pointer rounded-lg bg-secondary-dark shadow-sm p-4 duration-300"
 							>
 								<i className="text-xl sm:text-2xl md:text-3xl">

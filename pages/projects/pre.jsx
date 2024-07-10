@@ -41,7 +41,7 @@
 
 			{project.images.map((imageItem) => {
 				return (
-					<div className="mb-10 sm:mb-0" key={imageItem.id}>
+					<div className="mb-10 sm:mb-0" key={'project-image-' + imageItem.id}>
 	  
 						<Image src={imageItem.img} className="rounded-xl cursor-pointer shadow-lg sm:shadow-none" alt={imageItem.title} key={imageItem.id} layout="responsive" width={100} height={90} />
 					</div>
@@ -63,7 +63,7 @@
 								return (
 									<li
 										className="font-general-regular text-ternary-light"
-										key={info.id}
+										key={'company-info-' + info.id}
 									>
 										<span>{info.title}: </span>
 										{info.title === 'Website' ? <a

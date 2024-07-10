@@ -46,10 +46,10 @@ function Projects() {
 			<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 md:gap-8 lg:gap-14">
 				{selectProject
 					? selectProjectsByCategory.map((project, index) => {
-							return <ProjectItem key={project.id} {...project} />;
+							return <ProjectItem key={'project-' + project.id} {...project} />;
 					  })
 					: projects.map((project, index) => (
-							<ProjectItem key={project.id} {...project} />
+							<ProjectItem key={'project-' + project.id} {...project} />
 					  ))}
 			</div>
 		</div>

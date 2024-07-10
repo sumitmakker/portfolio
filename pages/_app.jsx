@@ -7,15 +7,15 @@ import connectDb from '../config/database';
 
 function MyApp({Component,pageProps}) {
 
-	const connect = async () => {
-		const response = await connectDb()
-		console.log(response);
-	}
-	useEffect(async() => {
-		console.log('yoo ohh yoo');
+	// const connect = async () => {
+	// 	const response = await connectDb()
+	// 	console.log(response);
+	// }
+	// useEffect(async() => {
+	// 	console.log('yoo ohh yoo');
 
-		connect()
-	},[])
+	// 	connect()
+	// },[])
 
   return (
 	<AnimatePresence>

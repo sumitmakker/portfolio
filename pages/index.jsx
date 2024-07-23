@@ -6,7 +6,7 @@ import ProjectsList from '../components/Projects/ProjectsList'
 function Home() {
   return (
 	<div className="mx-auto px-4 md:px-2">
-		<MetaHead />
+		<MetaHead title={'Home'}/>
 		<Banner />
 
 		<div className="text-center mt-16 md:mt-32">

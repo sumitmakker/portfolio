@@ -5,7 +5,7 @@ import Navbar from './Navbar'
 
 function Common({children}) {
   return (
-	<div className="container transition duration-300 px-4 mx-auto">
+	<div className="container transition duration-300 md:px-6 mx-auto">
 		<MetaHead />
 		<Navbar />
 		<div>{children}</div>

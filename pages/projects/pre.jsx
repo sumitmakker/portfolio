@@ -35,15 +35,14 @@
 		<div className="grid grid-cols-1 sm:grid-cols-3 sm:gap-10 mt-12">
 
 			<div className="mb-10 sm:mb-0" key={project.id}>
-				<Image src={project.image} className="rounded-xl cursor-pointer shadow-lg sm:shadow-none" alt={project.title} key={project.id} layout="responsive" width={100} height={90}
-				/>
+				<Image src={project.image} className="rounded-xl cursor-pointer shadow-lg sm:shadow-none" alt={project.title} key={project.id} width={100} height={90}/>
 			</div>
 
 			{project.images.map((imageItem) => {
 				return (
 					<div className="mb-10 sm:mb-0" key={'project-image-' + imageItem.id}>
 	  
-						<Image src={imageItem.img} className="rounded-xl cursor-pointer shadow-lg sm:shadow-none" alt={imageItem.title} key={imageItem.id} layout="responsive" width={100} height={90} />
+						<Image src={imageItem.img} className="rounded-xl cursor-pointer shadow-lg sm:shadow-none" alt={imageItem.title} key={imageItem.id} width={100} height={90}/>
 					</div>
 				);
 			})}

@@ -22,7 +22,7 @@ function Footer() {
 		{
 			id: 3,
 			icon: <FiLinkedin />,
-			url: 'https://www.linkedin.com/in/sumit-makker-a1230824b',
+			url: 'https://www.linkedin.com/in/sumit-makker',
 		},
 	];
 

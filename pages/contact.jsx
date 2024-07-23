@@ -7,7 +7,7 @@ import MetaHead from '../components/Reuseable/MetaHead';
 function Contact() {
   return (
 	<div className="max-w-7xl mx-auto px-4 md:px-2">
-		<MetaHead />
+		<MetaHead title={'Contact'}/>
 
 		<motion.div
 			initial={{ opacity: 0 }}

@@ -52,6 +52,7 @@ function Navbar() {
 								alt="Dark Logo"
 								width={150}
 								height={120}
+								priority={true}
 							/>
 						</Link>
 					</div>

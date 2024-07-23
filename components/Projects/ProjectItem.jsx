@@ -26,10 +26,12 @@ function Project(props) {
 						<Image
 							src={props.image}
 							className="banner-img rounded-t-lg border-none "
-							alt="Single Project"
-							layout="responsive"
+							alt="Project Banner Image"
 							width={100}
-							height={90}
+							height={100}
+							style={{width : '100%'}}
+							priority={true}
+							unoptimized
 						/>
 					</div>
 					<div className="text-center px-4 py-6">

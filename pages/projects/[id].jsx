@@ -7,6 +7,7 @@ import { FiClock,FiTag,FWor } from 'react-icons/fi';
 import { TbWorld } from "react-icons/tb";
 import Tabs from '../../components/Projects/Tabs/Tabs';
 import Image from 'next/image';
+import MetaHead from '../../components/Reuseable/MetaHead';
 
 function ProjectDetails({project}) {
 
@@ -16,6 +17,9 @@ function ProjectDetails({project}) {
 
 	return (
 		<div className="max-w-7xl mx-auto px-4 md:px-2">
+
+			<MetaHead title={'Project - ' + project.title}/>
+
 			{/* Header */}
 			<div className='flex flex-col items-center'>
 				<p className="font-general-medium text-left text-3xl sm:text-5xl font-bold text-primary-light mt-10 md:mt-20 mb-7">
@@ -45,7 +49,7 @@ function ProjectDetails({project}) {
 			</div>
 
 			<a href={project.image} data-fancybox>
-				<Image className='mx-auto rounded mt-3 lg:mt-10 mb-10 md:mt-0' src={project.image} width={400} height={200} style={{maxWidth : '600px',width : '100%'}}/>
+				<Image className='mx-auto rounded mt-3 lg:mt-10 mb-10 md:mt-0' src={project.image} alt="Project Banner Image" width={400} height={200} style={{maxWidth : '600px',width : '100%'}}/>
 			</a>
 
 			<div className="flex justify-center font-general-regular text-ternary-light">
@@ -66,7 +70,7 @@ function ProjectDetails({project}) {
 
 export async function getServerSideProps({ query }) {
 	const { id } = query;
-	console.log(id);
+	
 	return {
 		props: {
 			project: projects.filter(

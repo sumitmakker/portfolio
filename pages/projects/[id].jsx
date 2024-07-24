@@ -1,21 +1,37 @@
 import 'react-slideshow-image/dist/styles.css'
 import { Fancybox } from "@fancyapps/ui";
 import "@fancyapps/ui/dist/fancybox/fancybox.css";
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { projects } from '../../data/projects';
 import { FiClock,FiTag,FWor } from 'react-icons/fi';
 import { TbWorld } from "react-icons/tb";
 import Tabs from '../../components/Projects/Tabs/Tabs';
 import Image from 'next/image';
 import MetaHead from '../../components/Reuseable/MetaHead';
+import { useRouter } from 'next/router';
+import { redirect } from 'next/dist/server/api-utils';
 
 function ProjectDetails({project}) {
+
+	const router = useRouter()
+	const [isProjectValid,setIsProjectValid] = useState(false)
+
+	useEffect(() => {
+
+		if(!project.title){
+			router.push('/')
+		}else{
+			setIsProjectValid(true)
+		}
+
+	},[])
 
 	Fancybox.bind("[data-fancybox]", {
 		// Your custom options
 	});
 
 	return (
+		isProjectValid ?
 		<div className="max-w-7xl mx-auto px-4 md:px-2">
 
 			<MetaHead title={'Project - ' + project.title}/>
@@ -65,17 +81,20 @@ function ProjectDetails({project}) {
 			<Tabs project_images={project.images}/>
 
 		</div>
+		: <div></div>
 	)
 }
 
 export async function getServerSideProps({ query }) {
 	const { id } = query;
-	
+
 	return {
 		props: {
 			project: projects.filter(
 				(project) => project.id === id
-			)[0],
+			)[0] ? projects.filter(
+				(project) => project.id === id
+			)[0] : {},
 		},
 	};
 }

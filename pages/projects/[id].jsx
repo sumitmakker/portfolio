@@ -24,7 +24,7 @@ function ProjectDetails({project}) {
 			setIsProjectValid(true)
 		}
 
-	},[])
+	},[project])
 
 	Fancybox.bind("[data-fancybox]", {
 		// Your custom options

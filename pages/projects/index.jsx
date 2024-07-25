@@ -4,7 +4,7 @@ import MetaHead from '../../components/Reuseable/MetaHead'
 
 function Projects() {
   return (
-	<div className="max-w-7xl mx-auto px-4 md:px-2">
+	<div>
 
 		<MetaHead title={'Projects'}/>
 		<ProjectsList />

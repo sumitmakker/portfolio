@@ -6,7 +6,7 @@ import MetaHead from '../components/Reuseable/MetaHead';
 
 function Contact() {
   return (
-	<div className="max-w-7xl mx-auto px-4 md:px-2">
+	<div>
 		<MetaHead title={'Contact'}/>
 
 		<motion.div
@@ -17,7 +17,7 @@ function Contact() {
 				duration: 0.5,
 				delay: 0.1,
 			}}
-			className="container mx-auto flex flex-col-reverse lg:flex-row py-5 lg:py-10 lg:mt-5"
+			className="container mx-auto flex flex-col-reverse lg:flex-row"
 		>
 			<ContactForm />
 

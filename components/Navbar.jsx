@@ -9,7 +9,6 @@ import logoLight from '../public/images/logo-light.svg';
 function Navbar() {
 
 	const [showMenu, setShowMenu] = useState(false);
-	const [showModal, setShowModal] = useState(false);
 
 	function toggleMenu() {
 		if (!showMenu) {
@@ -19,29 +18,16 @@ function Navbar() {
 		}
 	}
 
-	function showHireMeModal() {
-		if (!showModal) {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.add('overflow-y-hidden');
-			setShowModal(true);
-		} else {
-			document
-				.getElementsByTagName('html')[0]
-				.classList.remove('overflow-y-hidden');
-			setShowModal(false);
-		}
-	}
-
 	return (
 		<motion.nav
 			initial={{ opacity: 0 }}
 			animate={{ opacity: 1 }}
 			id="nav"
-			className="sm:container sm:mx-auto"
+			className='md:mx-5'
 		>
 			{/* Header */}
-			<div className="z-10 max-w-screen-lg xl:max-w-screen-xl block sm:flex sm:justify-between sm:items-center py-6">
+			<div className="z-10 block sm:flex sm:justify-between sm:items-center py-6">
+				
 				{/* Header menu links and small screen hamburger menu */}
 				<div className="flex justify-between items-center px-4 sm:px-0">
 					<div>
@@ -103,15 +89,7 @@ function Navbar() {
 							Contact
 						</Link>
 					</div>
-					<div className="border-t-2 pt-3 sm:pt-0 sm:border-t-0 border-secondary-dark">
-						<button
-							onClick={showHireMeModal}
-							className="font-general-medium sm:hidden block text-left text-md bg-secondary-dark hover:bg-ternary-dark text-ternary-light hover:text-white shadow-sm rounded-sm px-4 py-2 mt-2 duration-300 w-24"
-							aria-label="Hire Me Button"
-						>
-							Hire Me
-						</button>
-					</div>
+					
 				</div>
 
 				{/* Header links large screen */}
@@ -130,35 +108,14 @@ function Navbar() {
 					</div>
 
 					<div
-						className="block text-left text-lg font-medium text-ternary-light hover:text-secondary-light  sm:mx-4 mb-2 sm:py-2"
+						className="block text-left text-lg font-medium text-ternary-light hover:text-secondary-light  sm:ms-4 mb-2 sm:py-2"
 						aria-label="Contact"
 					>
 						<Link href="/contact">Contact</Link>
 					</div>
 				</div>
+				
 
-				{/* Header right section buttons */}
-				<div className="hidden sm:flex justify-between items-center flex-col md:flex-row">
-					<div className="hidden md:flex">
-						<button
-							onClick={showHireMeModal}
-							className="text-md font-general-medium bg-secondary-dark hover:bg-ternary-dark text-ternary-light hover:text-white shadow-sm rounded-md px-5 py-2.5 duration-300"
-							aria-label="Hire Me Button"
-						>
-							Hire Me
-						</button>
-					</div>
-
-				</div>
-			</div>
-			<div>
-				{showModal ? (
-					<HireModal
-						onClose={showHireMeModal}
-						onRequest={showHireMeModal}
-					/>
-				) : null}
-				{showModal ? showHireMeModal : null}
 			</div>
 		</motion.nav>
   	)

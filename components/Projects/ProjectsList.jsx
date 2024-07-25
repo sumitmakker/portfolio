@@ -43,7 +43,7 @@ function Projects() {
 				</div>
 			</div> */}
 
-			<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 md:gap-8 lg:gap-14">
+			<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-7">
 				{selectProject
 					? selectProjectsByCategory.map((project, index) => {
 							return <ProjectItem key={'project-' + project.id} {...project} />;

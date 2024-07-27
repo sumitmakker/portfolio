@@ -9,7 +9,7 @@ function ContactForm() {
 					onSubmit={(e) => {
 						e.preventDefault();
 					}}
-					className="max-w-xl m-4 p-6 sm:p-10 rounded-xl shadow-xl text-left"
+					className="m-4 p-6 sm:p-10 rounded-xl shadow-xl text-left" style={{backgroundColor : '#16171f'}}
 				>
 					
 					<FormInput

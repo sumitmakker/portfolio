@@ -2,6 +2,12 @@ import Button from '../Reuseable/Button';
 import FormInput from '../Reuseable/FormInput';
 
 function ContactForm() {
+
+	const selectOptions = [
+		'Web Application',
+		'Mobile Application',
+	];
+
 	return (
 		<div className="w-full lg:w-1/2">
 			<div className="leading-loose">
@@ -30,15 +36,13 @@ function ContactForm() {
 						placeholderText="Your email"
 						ariaLabelName="Email"
 					/>
-					<FormInput
-						inputLabel="Subject"
-						labelFor="subject"
-						inputType="text"
-						inputId="subject"
-						inputName="subject"
-						placeholderText="Subject"
-						ariaLabelName="Subject"
-					/>
+
+					<select className="w-full px-4 sm:px-6 py-2 border-secondary-dark rounded-lg text-sm sm:text-md dark:font-medium bg-secondary-dark text-ternary-light">
+
+						{selectOptions.map((option) => (
+							<option className="text-normal sm:text-md" key={'option-' + option}>{option}</option>
+						))}
+					</select>
 
 					<div className="mt-6">
 						<label
